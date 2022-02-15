@@ -1,0 +1,154 @@
+:root {
+	--palered:				#b7313e;
+	--paleslateblue:		#495d99;
+	--darkgray:				#1c1a1a;
+}
+html {
+	scroll-behavior:		smooth;
+}
+body {
+	margin:				0;
+}
+
+
+
+/* For medium and large screens */
+
+@media screen and (min-width: 1024px) {
+	#navbar {
+		top:				0;
+		position:			fixed;
+		display:			flex;
+		justify-content:		right;
+		align-items:		center;
+		width:				100%;
+		height:				4.5vmax;
+		background:			var(--palered);
+		box-shadow:			1px 1px var(--darkgray);
+	}
+
+	#navbar ul {
+		list-style-type: none;
+  		margin: 0;
+  		padding: 0;
+  		overflow: hidden;
+	}
+
+	#navbar li {
+		list-style-type:	none;
+		text-decoration:	none;
+		display:			inline;
+		float:				left;
+	}
+	#navbar a {
+		color:				white;
+		text-decoration:	none;
+		display: block;
+  		color: white;
+  		text-align: center;
+  		padding: 14px 16px;
+  		text-decoration: none;
+	}
+	#navbar a:hover {
+		background:			slateblue;
+	}
+
+	#welcome-section {
+		height:				100vh;
+		background:			linear-gradient(90deg, #3d3d3d, #141414);	
+		display:			flex;
+		flex-direction:		column;
+		justify-content:	center;
+		align-items:		center;
+	}
+	#welcome-section h1 {
+		color:				white;
+		font-weight:		bold;
+		font-size:			4vmax;
+		margin:				-1.5vmax;
+	}
+	#welcome-section h3 {
+		color:				var(--palered);
+		font-weight:		300;
+		font-size:			2.5vmax;
+	}	
+
+	#projects {
+		background:			#4b6191;
+		padding:			2vmax;
+	}
+
+	.project-tile {
+		width:				10vmax;
+		height:				20vmax;
+		background:			silver;
+		margin:				0;
+		box-shadow:			2px 2px 2px darkblue;
+		display:			flex;
+		flex-direction:		column;
+		justify-content:	space-between;
+	}
+	.project-tile a {
+		text-decoration:	none;
+		color:				gold;
+	}
+	.project-tile:hover h3 {
+		color:				yellow;
+		text-shadow:		1px 1px 1px red;
+	}
+
+	#contact {
+		bottom:				0;
+		width:				100%;
+		height:				95vh;
+		color:				white;
+		background:			#343442;
+		display:			flex;
+		flex-direction:		column;
+		align-items:		center;
+	}		
+	#contact li {
+		list-style-type:	none;
+		height:				4vmax;
+		display:			flex;
+		transition:			0.3s;
+	}
+	#contacts li:hover {
+		position:			relative;
+		top:				1vmax;
+	}
+	#contact a {
+		text-decoration:	none;	
+	}
+
+	#contacts {
+		display:			flex;
+		flex-direction:		column;
+		justify-content:	center;
+		align-items:		center;
+		width:				100%;
+		height:				80%;
+	}
+	#contacts h1 {
+		font-weight:		bold;
+		font-size:			5vmax;
+		margin:				-1vmax;
+	}
+	#contacts p {
+		font-weight:		300;
+	}
+	#contacts a {
+		color:				white;
+		font-size:			2vmax;
+	}
+
+	#footer-info {
+		border-top:			2px solid var(--palered);	
+		width:				100%;
+		height:				20%;
+		display:			flex;
+		justify-content:	space-around;
+		align-items:		center;
+		bottom:				0;
+	}
+}

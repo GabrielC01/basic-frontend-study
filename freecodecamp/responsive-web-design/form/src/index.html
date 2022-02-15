@@ -1,0 +1,43 @@
+<h1 id="title">freeCodeCamp Survey Form</h1>
+<p id="description">Thank you for taking the time to help us improve the platform </p:>
+<form id="survey-form">
+  <label for="name" id="name-label">Name:</label><br>
+  <input type="text" id="name" name="name" placeholder="Type your name"><br><br>
+  
+  <label for="email" id="email-label">E-mail:</label><br>
+  <input type="text" id="email" name="email" pattern="email" placeholder="Type your e-mail address"><br><br>
+  
+  <label for="number" id="number-label">Age:</label><br>
+  <input type="number" id="number" name="age" min="5" max="120" placeholder="Type your age"><br><br>
+  
+  <label for="name">Which option best describes your current role?</label><br>
+  <select name="dropdown" id="cars">
+    <option value="volvo">Student</option>
+    <option value="saab">Fulltime job</option>
+    <option value="mercedes">Fulltime learner</option>
+    <option value="audi">Prefer not to say</option>
+    <option value="audi">Other</option>
+  </select>
+  <br><br>
+  <label name="recommend">Would you recommend freeCodeCamp to a friend?</label><br>
+  <input type="radio" name="recommend">Definitely<br><br>
+  <input type="radio" name="recommend">Maybe<br><br>
+  <input type="radio" name="recommend">Not sure<br><br>
+  <label name="review">What would you like to see improved? (Check all that apply)</label> <br>
+  <input type="checkbox" name="review" value="front-end-projects"><label>Front-end Projects</label><br><br>
+  <input type="checkbox" name="review" value="back-end-projects"><label>Back-end Projects</label><br><br>
+  <input type="checkbox" name="review" value="data-visualization"><label>Data Visualization</label><br><br>
+  <input type="checkbox" name="review" value="challenges"><label>Challenges</label><br><br>
+  <input type="checkbox" name="review" value="open-source-community"><label>Open Source Community</label><br><br>
+  <input type="checkbox" name="review" value="gitter-help-rooms"><label>Gitter help rooms</label><br><br>
+  <input type="checkbox" name="review" value="videos"><label>Videos</label><br><br>
+  <input type="checkbox" name="review" value="city-meetups"><label>City Meetups</label><br><br>
+  <input type="checkbox" name="review" value="wiki"><label>Wiki</label><br><br>
+  <input type="checkbox" name="review" value="forum"><label>Forum</label><br><br>
+  <input type="checkbox" name="review" value="additional-courses"><label>Additional Courses</label><br><br>
+  <label id="comments">Any comments or suggestions?</label>
+  <br>
+  <textarea id="comment" rows="7" cols="50" placeholder="Enter your comment here"></textarea>
+  <br><br>
+  <button id="submit">Submit</button>
+</form>

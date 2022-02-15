@@ -1,0 +1,44 @@
+body {
+  font-family: system-ui;
+  background: lightgray;
+  color: black;
+}
+#title {
+  text-align: center;
+}
+#title_caption {
+  text-align: center;
+}
+#img-div {
+  background-color: white;
+  padding: 2px;
+  text-align: center;
+}
+#img {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content:  center;
+}
+#tribute-info {
+  text-align: center;
+}
+#timeline {
+  display: flex;
+  flex-direction:  column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+#quote {
+  margin-top: 5%;
+  margin-left: 27%;
+  margin-right: 32%;
+}
+li {
+  margin-top: 4%;
+}
+footer {
+  text-align: center;
+}

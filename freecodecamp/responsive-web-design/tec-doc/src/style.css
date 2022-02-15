@@ -1,0 +1,38 @@
+body {
+	display: 			flex;
+	flex-direction: 	row-reverse;
+	margin: 			0;
+}
+#navbar {
+	display: 			flex;	
+	flex-direction: 	column;
+	border-right: 		solid darkgray;
+	border-width: 		0 2px;
+}
+#navbar-title {
+	padding: 			20px 0px;
+	font-weight: 		bold;
+	font-size: 			20pt;
+}
+#main-doc {
+	margin: 			40px;
+}
+.nav-link {
+	padding: 			10px 0px;
+	width: 				300px;
+	text-decoration: 	none;
+	color: 				#202121;
+	font-size: 			12pt;
+	border-top: 		2px solid darkgray;
+}
+.section-header {
+	font-size: 			20pt;
+	font-weight: 		bold;
+}
+
+/* Media queries */
+@media screen and (min-width: 1366px) {
+	body {
+		flex-direction: 	row;
+	}
+}

@@ -1,0 +1,80 @@
+/* Variables */
+:root {
+  --bg-headerAndBody: wheat;
+}
+/* elements */
+body {
+  margin: 0;
+  background-color: var(--bg-headerAndBody);
+  height: 100%;
+}
+#header {
+  background-color: var(--bg-headerAndBody);
+  display: flex;
+  flex-direction: row;
+  text-align: right;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1%;
+}
+#header-img {
+  width: 30%;
+}
+#nav-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#title {
+  text-align: center;
+}
+#submit {
+  font-weight: bold;
+  background-color: gold;
+  border: none;
+  width: 19%;
+  text-align: right;
+  transition: all 0.5s;
+}
+#submit:hover {
+  background-color: orange;
+}
+#main {
+  margin: 20%;
+}
+#video {
+  width: 70%;
+  display: flex;
+  margin: auto;
+}
+#footer {
+  background-color: darkgray;
+  display: flex;
+  justify-content: right;
+  bottom: 0;
+  height: 1%;
+}
+.nav-link {
+  font-size: 120%;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-decoration: none;
+  color: #343949;
+}
+.footer-link {
+  font-size: 120%;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-decoration: none;
+  color: #343949;
+}
+
+/* Media Queries */
+
+@media (min-width: 100px) {
+  #form {
+     width: 100%;
+   }
+}
