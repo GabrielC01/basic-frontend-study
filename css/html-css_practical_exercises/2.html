@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Style of text selection</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      .orange-highlight b::selection {
+        background-color: orange;
+      }
+      .green-highlight::selection {
+        background-color: green;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="orange-highlight"><b>Preview:</b></p> 
+    <p class="green-highlight">Select some of this text.</p>
+  </body>
+</html>
