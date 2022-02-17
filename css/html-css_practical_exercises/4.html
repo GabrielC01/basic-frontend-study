@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      .container {
+        width: 300px;
+        height: 300px;
+      } 
+      .container img {
+        width: inherit;
+        height: inherit;
+      }
+      .overlay {
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;  
+      }
+      .overlay h1 {
+        font-weight: 200;
+        color: rgba(255, 255, 255, 0.3);
+      } 
+      .overlay {
+        position: absolute;
+        top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="overlay"><h1>Hello, World</h1></div>
+      <img src="../images/flowers.jpg" alt="Flowers"> 
+    </div> 
+  </body>
+</html>
