@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      .list {
+        width: 250px;
+        height: 200px;
+        background-color: #3365a4;
+        border-radius: 20px 0 0 20px;
+        padding: 1%;
+        overflow-y: auto;
+        font-size: 15pt;
+        display: flex;
+      }
+      .list dl {
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+      }
+      .list dt {
+        position: sticky;
+        top: 0rem;
+        left: 0.2rem;
+        display: inline-flex;
+        background-color: #263238;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        justify-content: center; 
+        align-items: center;
+        color: #cfd8dc;
+        font-weight: bold;
+      } 
+      .list dd {
+        color: white;
+        grid-column: 2;
+        padding: 2%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="list">
+      <dl>
+        <dt>A</dt>
+        <dd>Abel</dd>
+        <dd>Alan</dd>
+        <dd>Alice</dd>
+
+        <dt>B</dt>
+        <dd>Bartholomew</dd>
+        <dd>Baruque</dd>
+        <dd>Brad</dd>
+
+        <dt>C</dt>
+        <dd>Carla</dd>
+        <dd>Caroline</dd>
+        <dd>Cornélio</dd>
+
+        <dt>D</dt>
+        <dd>Daniel</dd>
+        <dd>Denis</dd>
+        <dd>Denise</dd>
+      </dl>
+    </div> 
+  </body>
+</html>
