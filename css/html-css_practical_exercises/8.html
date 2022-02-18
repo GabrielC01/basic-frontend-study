@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      #hover-btn {
+        width: 12vmax;
+        height: 4vmax;
+        color: white;
+        background-color: #192392; 
+        border: none;
+        font-size: 1.5vmax;
+        font-weight: bold;
+      } 
+    </style>
+    <script>
+      function hover(obj) {
+              obj.innerHTML = 'hi';
+              document.body.AddEventListener('mousemove', (event) => {
+                      document.getElementById('p').innerHTML = event.x; 
+                    })
+            }
+    </script>
+  </head>
+  <body>
+    <button id="hover-btn" onmouseover="hover(this)">Hover me</button> 
+    <p id="p"></p>
+  </body>
+</html>
