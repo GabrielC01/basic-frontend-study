@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Travel reservation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    </style>
+  </head>
+  <body>
+    <h1>Travel reservation form</h1>
+    <p>* denotes mandatory</p>
+    <form>
+      <label for="name">Full name*:</label><br>
+      <input type="text" name="name" value=""><br>
+
+      <label for="email">Email address*:</label><br>
+      <input type="email" name="email" value=""><br>
+
+      <label for="tour">Select Tour Package*:</label><br>
+      <input type="select" name="tour" value=""><br>
+
+      <label for="arrival-date">Arrival date*:</label><br>
+      <input type="date" name="arrival-date" value=""><br>
+
+      <label for="num-people">Number of persons*:</label><br>
+      <input type="number" name="num-people" value=""><br>
+
+      <label>What would you want to avail?*:</label><br>
+      Boarding<input type="checkbox" name="details[]" value="Boarding"><br>
+      Fooding<input type="checkbox" name="details[]" value="Fooding"><br>
+      Sight seeing<input type="checkbox" name="details[]" value="Sight seeing"><br>
+
+      <label for="discount">Discount Coupon code:</label><br>
+      <input type="text" name="discount" value=""><br>
+      
+      <label for="conditions">Terms and conditions*</label><br>
+      I agree<input type="radio" name="conditions">
+      I disagree<input type="radio" name="conditions"><br>
+
+      <input type="submit" name="submit" value="Complete reservation">
+    </form> 
+  </body>
+</html>
