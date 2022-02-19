@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Simple form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      .container {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+      } 
+      .container form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .container input[type="submit"] {
+        width: 50%;
+        margin-top: 10px;
+      }
+      .container fieldset {
+        display: flex;
+        width: 40%;
+        flex-direction: column;
+      }
+      label {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="" method="POST">
+        <fieldset>
+         <legend>Contato</legend> 
+         <label for="name">Name:</label>
+         <input type="text" name="name" value=""><br>
+         <label for="email">E-mail:</label>
+         <input type="email" name="email" value="">
+        </fieldset> 
+        <input type="submit" name="" value="Submit">
+      </form>
+    </div>
+  </body>
+</html>
