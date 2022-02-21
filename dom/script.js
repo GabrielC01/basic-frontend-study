@@ -3,3 +3,4 @@ element.textContent += ' Hi';
 console.log(element.textContent);
 
 element.innerHTML = "innerHTML";
+element.innerText = "innerText";
