@@ -17,3 +17,11 @@ function mouseOver() {
 function mouseLeave() {
   h1.style.color = "navy";
 }
+
+const caption = document.querySelector('h2');
+caption.style.color = "navy";
+caption.style.transition = "0.1s";
+
+caption.onclick = print;
+caption.onmouseover = mouseOver;
+caption.onmouseleave = mouseLeave;
