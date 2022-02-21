@@ -25,3 +25,8 @@ caption.style.transition = "0.1s";
 caption.onclick = print;
 caption.onmouseover = mouseOver;
 caption.onmouseleave = mouseLeave;
+
+const input = document.querySelector('input');
+input.onkeypress = function(event) {
+  console.log(event.currentTarget.value);
+}
