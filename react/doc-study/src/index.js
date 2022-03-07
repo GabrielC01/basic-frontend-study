@@ -3,28 +3,8 @@ import ReactDOM from 'react-dom';
 
 const rootElement = document.getElementById('root');
 
-/* Create elements */
+/* Rendering elements */
 
-const element1 = (
-	<h1 className="greeting">
-		Hello, user!
-	</h1>
-);
+const element = <h1>Hello, user!</h1>;
 
-const element2 = React.createElement(
-	'h1',
-	{className: 'greeting'},
-	'Hello, user!'
-);
-
-const bundle = (
-	<div>
-		{element1}
-		{element2}
-	</div>
-);
-
-ReactDOM.render(
-	bundle,
-	rootElement
-);
+ReactDOM.render(element, rootElement);
