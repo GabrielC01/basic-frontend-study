@@ -3,10 +3,23 @@ import ReactDOM from 'react-dom';
 
 const rootElement = document.getElementById('root');
 
-const name = 'Gabriel';
-const newElement = <h1>Hello, {name}!</h1> // JSX can contain JS expressions
+
+function formatUser(user) {
+	return user.firstName + ' ' + user.lastName;
+}
+
+const user = {
+	firstName: 'Gabriel',
+	lastName: 'Chaves'
+};
+
+const element = (
+	<h1>
+		Hello, {formatUser(user)}!
+	</h1>
+);
 
 ReactDOM.render(
-	newElement,
+	element,
 	rootElement
 );
