@@ -3,38 +3,22 @@ import ReactDOM from 'react-dom';
 
 const rootElement = document.getElementById('root');
 
-/* Components and props */
+/* State and lifecycle */
 
-function Comment(props) {
-  return (
-    <div className="Comment">
-			<UserInfo user={props.author} />
-      <div className="Comment-text">
-        {props.text}
-      </div>
-      <div className="Comment-date">
-        {formatDate(props.date)}
-      </div>
-    </div>
-  );
-}
-
-function Avatar(props) {
+function Clock(props) {
 	return (
-		<img className="Avatar"
-		  src={props.user.avatarUrl}
-		  alt={props.user.name}
-		/>
-	);
-}
-
-function UserInfo(props) {
-	return (
-		<div className="UserInfo">
-			<Avatar user={props.user} />
-			<div className="UserInfo-name">
-				{props.user.name}
-			</div>
+		<div>
+			<h1>Hello, user!</h1>
+			<h2>It is {props.date.toLocaleTimeString()}.</h2>
 		</div>
 	);
 }
+
+function tick() {
+	ReactDOM.render(
+		<Clock date={new Date()} />,
+		rootElement
+	);
+}
+
+setInterval(tick, 1000);
