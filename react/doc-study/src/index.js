@@ -3,19 +3,17 @@ import ReactDOM from 'react-dom';
 
 const rootElement = document.getElementById('root');
 
-/* Specifying attributes */
+/* Nesting tags */
 
-// Using string literal
-const anchor = <a href="https://gabcchaves.github.io" target="_blank">{"Gabriel's portfolio"}</a>;
-// Using JS expression
-const url = 'https://gabcchaves.github.io';
-const anotherAnchor = <a href={url} target="_blank">{"Gabriel's portfolio"}</a>;
-
-const bundle = (
-	<h1>{anchor}<br/><br/>{anotherAnchor}</h1>
+const element = (
+	<div>
+		<h1>This is a child</h1>
+		<h2>This is a another child</h2>
+	</div>
 );
 
+
 ReactDOM.render(
-	bundle,
+	element,
 	rootElement
 );
