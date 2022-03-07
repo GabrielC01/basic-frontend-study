@@ -3,17 +3,28 @@ import ReactDOM from 'react-dom';
 
 const rootElement = document.getElementById('root');
 
-/* Nesting tags */
+/* Create elements */
 
-const element = (
+const element1 = (
+	<h1 className="greeting">
+		Hello, user!
+	</h1>
+);
+
+const element2 = React.createElement(
+	'h1',
+	{className: 'greeting'},
+	'Hello, user!'
+);
+
+const bundle = (
 	<div>
-		<h1>This is a child</h1>
-		<h2>This is a another child</h2>
+		{element1}
+		{element2}
 	</div>
 );
 
-
 ReactDOM.render(
-	element,
+	bundle,
 	rootElement
 );
