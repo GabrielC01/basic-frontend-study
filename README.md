@@ -1,2 +1,2 @@
-# Front end mentor challenges
-This repository is set to store my basic front-end exercises.
+# Front-end study repository
+This repository is set to store my exercises about front-end languages and tools.
