@@ -9,8 +9,15 @@ function Welcome(props) {
 	return <h1>Hello, {props.name}!</h1>;
 }
 
-// Rendering components:
-const element = <Welcome name="Gabriel" />;
-ReactDOM.render(element, rootElement);
+function App() {
+	return (
+		<div>
+			<Welcome name="Sara" />
+			<Welcome name="Cahal" />
+			<Welcome name="Edite" />
+		</div>
+	);
+}
 
-// Obs: Always start component names with capital letters.
+ReactDOM.render(<App />, rootElement);
+
