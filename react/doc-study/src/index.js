@@ -17,4 +17,7 @@ function tick() {
 	ReactDOM.render(element, rootElement);
 }
 
+// React only updates the necessary, by comparing the previous
+// state to the current one.
+
 setInterval(tick, 1000);
