@@ -3,17 +3,19 @@ import ReactDOM from 'react-dom';
 
 const rootElement = document.getElementById('root');
 
-function greet(user) {
-	if (user) {
-		return <h1>Hello, {user}!</h1>;
-	} else {
-		return <h1>Hello, Stranger.</h1>;
-	}
-}
+/* Specifying attributes */
 
-const user = 'Gabriel';
+// Using string literal
+const anchor = <a href="https://gabcchaves.github.io" target="_blank">{"Gabriel's portfolio"}</a>;
+// Using JS expression
+const url = 'https://gabcchaves.github.io';
+const anotherAnchor = <a href={url} target="_blank">{"Gabriel's portfolio"}</a>;
+
+const bundle = (
+	<h1>{anchor}<br/><br/>{anotherAnchor}</h1>
+);
 
 ReactDOM.render(
-	greet(user),
+	bundle,
 	rootElement
 );
