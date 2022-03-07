@@ -3,23 +3,17 @@ import ReactDOM from 'react-dom';
 
 const rootElement = document.getElementById('root');
 
-
-function formatUser(user) {
-	return user.firstName + ' ' + user.lastName;
+function greet(user) {
+	if (user) {
+		return <h1>Hello, {user}!</h1>;
+	} else {
+		return <h1>Hello, Stranger.</h1>;
+	}
 }
 
-const user = {
-	firstName: 'Gabriel',
-	lastName: 'Chaves'
-};
-
-const element = (
-	<h1>
-		Hello, {formatUser(user)}!
-	</h1>
-);
+const user = 'Gabriel';
 
 ReactDOM.render(
-	element,
+	greet(user),
 	rootElement
 );
