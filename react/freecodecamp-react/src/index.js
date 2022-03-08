@@ -3,17 +3,26 @@ import ReactDOM from 'react-dom';
 
 const root = document.getElementById('root');
 
-class MyComponent extends React.Component {
+const CurrentDate = (props) => {
+	return (
+		<div>
+			<p> The current date is: {props.date}</p>
+		</div>
+	);
+}
+
+class Calendar extends React.Component {
 	constructor(props) {
 		super(props);
 	}
 	render() {
 		return (
 			<div>
-				<h1>Component from scratch.</h1>
+				<h3>What date is it?</h3>
+				<CurrentDate date={Date()} />
 			</div>
 		);
 	}
 }
 
-ReactDOM.render(<MyComponent />, root);
+ReactDOM.render(<Calendar />, root);
