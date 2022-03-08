@@ -6,13 +6,7 @@ const root = document.getElementById('root');
 const JSX = (
 	<div>
 		<h1>Hello, user!</h1>
-		<p>This is an exercise from FreeCodeCamp's Front End Development Libraries.</p>
-		<ul>
-			{/* This is a comment. */}
-			<li>Element</li>
-			<li>Element</li>
-			<li>Element</li>
-		</ul>
+		<p>Lets render this to the DOM.</p>
 	</div>
 );
 
