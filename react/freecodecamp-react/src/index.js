@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 
 const root = document.getElementById('root');
 
-class StatefulComponent extends React.Component {
+class MyComponent extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			name: "Gabriel"
+			name: 'freeCodeCamp'
 		}
 	}
 	render() {
@@ -20,4 +20,4 @@ class StatefulComponent extends React.Component {
 	}
 }
 
-ReactDOM.render(<StatefulComponent />, root);
+ReactDOM.render(<MyComponent />, root);
