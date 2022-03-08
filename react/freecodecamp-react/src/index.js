@@ -4,34 +4,20 @@ import PropTypes from 'prop-types';
 
 const root = document.getElementById('root');
 
-class CampSite extends React.Component {
+class StatefulComponent extends React.Component {
 	constructor(props) {
 		super(props);
+		this.state = {
+			name: "Gabriel"
+		}
 	}
 	render() {
 		return (
 			<div>
-				<Camper />
+				<h1>{this.state.name}</h1>
 			</div>
 		);
 	}
 }
 
-class Camper extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-	render() {
-		return <p>{this.props.name}</p>
-	}
-}
-
-Camper.propTypes = {
-	name: PropTypes.string.isRequired
-};
-
-Camper.defaultProps = {
-	name: 'CamperBot'
-};
-
-ReactDOM.render(<CampSite />, root);
+ReactDOM.render(<StatefulComponent />, root);
