@@ -3,25 +3,16 @@ import ReactDOM from 'react-dom';
 
 const root = document.getElementById('root');
 
-const List = (props) => {
-	return <p>{props.tasks.join(', ')}</p>;
-};
-
-class ToDo extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-	render() {
-		return (
-			<div>
-				<h1>To Do Lists</h1>
-				<h2>Today</h2>
-				<List tasks={["walk dog", "workout"]} />
-				<h2>Tomorrow</h2>
-				<List tasks={["walk", "whatever", "workout"]} />
-			</div>
-		);
-	}
+const ShoppingCart = (props) => {
+	return (
+		<div>
+			<h1>Shopping Cart Component</h1>
+		</div>
+	);
 }
 
-ReactDOM.render(<ToDo />, root);
+ShoppingCart.defaultProps = {
+	items: 0
+};
+
+ReactDOM.render(<ShoppingCart />, root);
