@@ -3,26 +3,41 @@ import ReactDOM from 'react-dom';
 
 const root = document.getElementById('root');
 
-const ChildComponent = () => {
+const TypesOfFruit = () => {
 	return (
 		<div>
-			<p>I am the child</p>
+			<h2>Fruits:</h2>
+			<ul>
+				<li>Apples</li>
+				<li>Blueberries</li>
+				<li>Strawberries</li>
+				<li>Bananas</li>
+			</ul>
 		</div>
 	);
-};
+}
 
-class ParentComponent extends React.Component {
+const Fruits = () => {
+	return (
+		<div>
+			<TypesOfFruit />
+		</div>
+	);
+}
+
+class TypesOfFood extends React.Component {
 	constructor(props) {
 		super(props);
 	}
+
 	render() {
 		return (
 			<div>
-				<h1>I am the parent</h1>
-				<ChildComponent />
+				<h1>Types of food:</h1>
+				<Fruits />
 			</div>
-		)
+		);
 	}
 }
 
-ReactDOM.render(<ParentComponent />, root);
+ReactDOM.render(<TypesOfFood />, root);
