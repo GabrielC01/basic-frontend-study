@@ -3,8 +3,13 @@ import ReactDOM from 'react-dom';
 
 const root = document.getElementById('root');
 
-const MyComponent = function () {
-	return (<div> <h2>This is a component.</h2> </div>);
+class MyComponent extends React.Component {
+	constructor(props) {
+		super(props);
+	}
+	render() {
+		return (<div><h1>Hello React!</h1></div>);
+	}
 };
 
 ReactDOM.render(<MyComponent />, root);
