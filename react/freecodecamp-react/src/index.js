@@ -3,12 +3,8 @@ import ReactDOM from 'react-dom';
 
 const root = document.getElementById('root');
 
-const JSX = (
-	<div className="myDiv">
-		<h2>Welcome to React!</h2><br />
-		<p>Be sure to close all tags!</p>
-		<hr />
-	</div>
-);
+const MyComponent = function () {
+	return (<div> <h2>This is a component.</h2> </div>);
+};
 
-ReactDOM.render(JSX, root);
+ReactDOM.render(<MyComponent />, root);
