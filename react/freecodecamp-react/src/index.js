@@ -7,24 +7,36 @@ class MyComponent extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			text: 'Hello'
+			visibility: false
+		};
+		this.setState(state => ({
+			visibility: false
+		}));
+	}
+
+	toggleVisibility() {
+		if (this.state.visibility) {
+			this.state.visibility = false;
+		} else {
+			this.state.visibility = true;
 		}
-		this.handleClick = this.handleClick.bind(this);
 	}
-	handleClick() {
-		this.setState({
-			text: 'You clicked!'
-		});
-	}
+
 	render() {
-		return (
-			<div>
-				<button onClick={this.handleClick}>
-					Click Me
-				</button>
-				<h1>{this.state.text}</h1>
-			</div>
-		);
+		if (this.state.visibility) {
+			return (
+				<div>
+					<button onClick={this.toggleVisibility}>Click Me</button>					
+					<h1>Now you see me!</h1>
+				</div>
+			);
+		} else {
+			return (
+				<div>
+					<button onClick={this.toggleVisibility}>Click Me</button>
+				</div>
+			);
+		}
 	}
 }
 
