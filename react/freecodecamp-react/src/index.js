@@ -3,41 +3,28 @@ import ReactDOM from 'react-dom';
 
 const root = document.getElementById('root');
 
-class Counter extends React.Component {
+class ControlledInput extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			count: 0
+			input: ''
 		};
-		this.increment = this.increment.bind(this);
-		this.decrement = this.decrement.bind(this);
-		this.reset = this.reset.bind(this);
+		this.handleChange = this.handleChange.bind(this);
 	}
-	increment() {
-		this.setState(state => ({
-			count: state.count + 1
-		}));
-	}
-	decrement() {
-		this.setState(state => ({
-			count: state.count - 1
-		}));
-	}
-	reset() {
-		this.setState(state => ({
-			count: 0
+	handleChange(event) {
+		this.setState(({
+			input: event.target.value
 		}));
 	}
 	render() {
 		return (
 			<div>
-				<button className='inc' onClick={this.increment}>Increment!</button>
-				<button className='dec' onClick={this.decrement}>Decrement!</button>
-				<button className='reset' onClick={this.reset}>Reset</button>
-				<h1>Current Count: {this.state.count}</h1>
+				<input value={this.state.input} onChange={this.handleChange}></input>
+				<h4>Controlled Input:</h4>
+				<p>{this.state.input}</p>
 			</div>
-		);
+		)
 	}
 }
 
-ReactDOM.render(<Counter />, root);
+ReactDOM.render(<ControlledInput />, root);
