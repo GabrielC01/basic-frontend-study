@@ -5,22 +5,22 @@ const rootElement = document.getElementById('root');
 
 /* State and lifecycle */
 
-function tick() {
-	ReactDOM.render(
-		<Clock date={new Date()} />,
-		rootElement
-	);
-}
-
 class Clock extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {date: new Date()};
+	}
 	render() {
 		return (
 			<div>
 				<h1>Hello, user!</h1>
-				<h2>It is {this.props.date.toLocaleTimeString()}.</h2>
+				<h2>It is {this.state.date.toLocaleTimeString()}.</h2>
 			</div>
 		);
 	}
 }
 
-setInterval(tick, 1000);
+ReactDOM.render(
+	<Clock />,
+	rootElement
+);
