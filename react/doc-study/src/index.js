@@ -3,42 +3,27 @@ import ReactDOM from 'react-dom';
 
 const rootElement = document.getElementById('root');
 
-/* Lifecycle methods*/
+/* Events */
 
-class Clock extends React.Component {
+function greet() {
+	alert('Hello');
+}
+
+class Event extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {date: new Date()};
-	}
-
-	componentDidMount() {
-		this.timerID = setInterval(
-			() => this.tick(),
-			1000
-		);
-	}
-
-	componentWillUnmount() {
-		clearInterval(this.timerID);	
-	}
-
-	tick() {
-		this.setState({
-			date: new Date()
-		});
 	}
 
 	render() {
 		return (
 			<div>
-				<h1>Hello, user!</h1>
-				<h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+				<button onClick={greet}>Click Me</button>
 			</div>
 		);
 	}
 }
 
 ReactDOM.render(
-	<Clock />,
+	<Event />,
 	rootElement
 );
