@@ -3,20 +3,24 @@ import ReactDOM from 'react-dom';
 
 const rootElement = document.getElementById('root');
 
-/* Events */
+/* React Conditionals */
 
-function EventType() {
-	const showType = (b) => {
-		alert(b.type);
-		/* b represents the event that triggered the function. */
-	}
+function MissedGoal() {
+	return <h1>MISSED!</h1>;
+}
 
-	return (
-		<button onClick={(event) => showType(event)}>Click Me!</button>
-	);
+function MadeGoal() {
+	return <h1>Goal!</h1>;
+}
+
+function Goal(props) {
+	const isGoal = props.isGoal;
+	if (isGoal)
+		return <MadeGoal />;
+	return <MissedGoal />;
 }
 
 ReactDOM.render(
-	<EventType />,
+	<Goal isGoal="true"/>,
 	rootElement
 );
