@@ -3,26 +3,28 @@ import ReactDOM from 'react-dom';
 
 const rootElement = document.getElementById('root');
 
-/* React Conditionals */
+/* React Lists */
 
-function MissedGoal() {
-	return <h1>MISSED!</h1>;
+// Renderind list items without keys, thus
+// there's no tracking of them.
+
+function Car(props) {
+	return <li>I am a { props.brand }</li>;
 }
 
-function MadeGoal() {
-	return <h1>Goal!</h1>;
-}
-
-function Goal(props) {
-	const isGoal = props.isGoal;
+function Garage() {
+	const cars = ['Ford', 'BMW', 'Audi'];
 	return (
 		<>
-			{isGoal ? <MadeGoal/> : <MissedGoal/>}
+			<h1>Who lives in my garage?</h1>
+			<ul>
+				{cars.map((car) => <Car brand={car}/>)}
+			</ul>
 		</>
 	);
 }
 
 ReactDOM.render(
-	<Goal isGoal={false}/>,
+	<Garage />,
 	rootElement
 );
