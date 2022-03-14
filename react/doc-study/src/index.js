@@ -5,17 +5,18 @@ const rootElement = document.getElementById('root');
 
 /* Events */
 
-function Greet() {
-	const greet = (a) => {
-		alert(a);
+function EventType() {
+	const showType = (b) => {
+		alert(b.type);
+		/* b represents the event that triggered the function. */
 	}
 
 	return (
-		<button onClick={() => greet("Hello!")}>Click Me!</button>
+		<button onClick={(event) => showType(event)}>Click Me!</button>
 	);
 }
 
 ReactDOM.render(
-	<Greet />,
+	<EventType />,
 	rootElement
 );
