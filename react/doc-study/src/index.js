@@ -5,25 +5,17 @@ const rootElement = document.getElementById('root');
 
 /* Events */
 
-function greet() {
-	alert('Hello');
-}
-
-class Event extends React.Component {
-	constructor(props) {
-		super(props);
+function Greet() {
+	const greet = (a) => {
+		alert(a);
 	}
 
-	render() {
-		return (
-			<div>
-				<button onClick={greet}>Click Me</button>
-			</div>
-		);
-	}
+	return (
+		<button onClick={() => greet("Hello!")}>Click Me!</button>
+	);
 }
 
 ReactDOM.render(
-	<Event />,
+	<Greet />,
 	rootElement
 );
