@@ -5,24 +5,24 @@ const rootElement = document.getElementById('root');
 
 /* React Conditionals */
 
-function Garage(props) {
-	const cars = props.cars;
+function MissedGoal() {
+	return <h1>MISSED!</h1>;
+}
+
+function MadeGoal() {
+	return <h1>Goal!</h1>;
+}
+
+function Goal(props) {
+	const isGoal = props.isGoal;
 	return (
 		<>
-			<h1>Garage</h1>
-			{/* If the bolean expression is true, then the code after && is ran. */}
-			{cars.length > 0 &&
-			<h2>
-				You have {cars.length} cars in your garage.
-			</h2>
-			}
+			{isGoal ? <MadeGoal/> : <MissedGoal/>}
 		</>
 	);
 }
 
-const cars = ['Ford', 'BMW', 'Audi'];
-
 ReactDOM.render(
-	<Garage cars={cars}/>,
+	<Goal isGoal={false}/>,
 	rootElement
 );
